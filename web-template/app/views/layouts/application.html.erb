@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConTextual</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Stardos+Stencil' rel='stylesheet' type='text/css'>
+
+  <!-- If you are using the gem version, you need this only -->
+  <!-- <link rel="stylesheet" href="css/app.css"> -->
+
+  <script src="js/vendor/modernizr.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+</head>
+
+
+    <body>
+
+
+<%= render "shared/menu" %>
+<%= yield %>
+
+<!-- ######################## Footer ######################## -->
+<footer>
+
+      <div class="row">
+          <div class="twelve columns footer">
+
+              <span>Author Enda McCormack 2015</span>
+          </div>
+
+      </div>
+
+</footer>
+
+<!-- ######################## Enda Footer ######################## -->
+
+  <!--<script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>-->
+</body>
+</html>
