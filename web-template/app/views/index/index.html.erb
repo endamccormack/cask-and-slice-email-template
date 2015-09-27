@@ -26,25 +26,18 @@
 
         <span class="primary">Cask and slice </span>
         <span class="secondary">will be taking place </span>
-        <span class="primary">Wednesday </span>
+        <span class="primary"><%= @event_date.strftime("%A") %> </span>
         <span class="secondary">the </span>
-        <span class="primary">12th </span>
+        <span class="primary"><%= @event_date.day.ordinalize %> </span>
         <span class="secondary">of </span>
-        <span class="primary">August </span>
+        <span class="primary"><%= @event_date.strftime("%B") %> </span>
         <span class="secondary">at </span>
-        <span class="primary">6PM </span>
+        <span class="primary"><%= @event_date.strftime("%l%p") %> </span>
         <span class="secondary">in </span>
-        <span class="primary">shoreditch </span>
-        <span class="secondary">tech hub </span>
-        <span class="primary">(Free beer and Pizza) </span>
+        <span class="primary">shoreditch tech hub </span></br>
+        <span class="secondary" style="font-size:26px;">(Free beer and Pizza) </span>
 
       </div>
-      <!-- <div class="row">
-        <div style="width:60%; margin-top:90px; margin-right:20%; margin-left:20%;">
-          <a href="/signup" class="button expand" >SIGN ME UP</a>
-          <p style="text-align:center;"><a style="color:#ff9900; text-decoration:underline; font-size: 32px;" onClick="toggleOverlay()">Watch a demo</a></p>
-        </div>
-      </div> -->
     </div>
 
   </div>
@@ -63,26 +56,16 @@
   </div>
 
   <div class="row">
-
-   <div class="large-4 columns">
-      <img src="/img/person.png" >
-      <h3>John Smith</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet enim nec ipsum posuere luctus. Phasellus condimentum mi quis quam consequat tempus. Vestibulum enim sapien, dignissim vel imperdiet sit amet, dapibus a nisl. Integer finibus turpis sit amet lorem porta sollicitudin. Sed varius lacus dui, sed gravida lectus interdum non. Etiam rutrum fringilla augue sed vestibulum. Suspendisse scelerisque, elit eu imperdiet consequat, diam arcu efficitur odio, nec pulvinar neque libero at sem. Donec non sagittis libero, sed bibendum tellus. Nullam tincidunt, felis dignissim aliquet aliquet, justo tellus volutpat tellus, ut blandit risus elit ac nisl. Cras congue nunc eu leo posuere, sit amet dapibus metus viverra. Etiam non bibendum est. Sed tempor interdum cursus. Cras eget turpis varius, rhoncus augue eu, consequat turpis. Nunc semper eu dolor quis facilisis.</p>
-   </div>
-
-
+    <% @event_talks.each do |talk| %>
     <div class="large-4 columns">
-      <img src="/img/person.png" >
-      <h3>Jane Smith</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet enim nec ipsum posuere luctus. Phasellus condimentum mi quis quam consequat tempus. Vestibulum enim sapien, dignissim vel imperdiet sit amet, dapibus a nisl. Integer finibus turpis sit amet lorem porta sollicitudin. Sed varius lacus dui, sed gravida lectus interdum non. Etiam rutrum fringilla augue sed vestibulum. Suspendisse scelerisque, elit eu imperdiet consequat, diam arcu efficitur odio, nec pulvinar neque libero at sem. Donec non sagittis libero, sed bibendum tellus. Nullam tincidunt, felis dignissim aliquet aliquet, justo tellus volutpat tellus, ut blandit risus elit ac nisl. Cras congue nunc eu leo posuere, sit amet dapibus metus viverra. Etiam non bibendum est. Sed tempor interdum cursus. Cras eget turpis varius, rhoncus augue eu, consequat turpis. Nunc semper eu dolor quis facilisis.</p>
+      <!-- <img src="" > -->
+      <div style="background-image: url(/img/<%= talk["image"] %>);" class="speaker-avatar"></div>
+      <h3><%= talk["name"] %></h3>
+      <h4><%= talk["title"] %></h4>
+      <p><%= talk["description"] %></p>
+      <p><%= talk["biography"] %></p>
     </div>
-
-
-    <div class="large-4 columns">
-      <img src="/img/person.png" >
-      <h3>Jannet Smith</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet enim nec ipsum posuere luctus. Phasellus condimentum mi quis quam consequat tempus. Vestibulum enim sapien, dignissim vel imperdiet sit amet, dapibus a nisl. Integer finibus turpis sit amet lorem porta sollicitudin. Sed varius lacus dui, sed gravida lectus interdum non. Etiam rutrum fringilla augue sed vestibulum. Suspendisse scelerisque, elit eu imperdiet consequat, diam arcu efficitur odio, nec pulvinar neque libero at sem. Donec non sagittis libero, sed bibendum tellus. Nullam tincidunt, felis dignissim aliquet aliquet, justo tellus volutpat tellus, ut blandit risus elit ac nisl. Cras congue nunc eu leo posuere, sit amet dapibus metus viverra. Etiam non bibendum est. Sed tempor interdum cursus. Cras eget turpis varius, rhoncus augue eu, consequat turpis. Nunc semper eu dolor quis facilisis.</p>
-    </div>
+    <%end%>
 
   </div>
 

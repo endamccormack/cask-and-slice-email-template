@@ -1,0 +1,12 @@
+{
+  "date" : "2015-10-14T18:00:00+00:00",
+  "talks": [
+    {
+      "name" : "Krzysztof Rozestwinski",
+      "image" : "Krzysztof-Rozestwinski.jpg",
+      "title" : "Agile games",
+      "description" : "Through simple games you will learn about team dynamics, self-organizing and multi-tasking. You can use those games to coach new teams or customers.",
+      "biography" : "Krzysztof is a scrum master working on delivering digital for the Ministry of Justice in beautiful sunny Croydon South London"
+    }
+  ]
+}
