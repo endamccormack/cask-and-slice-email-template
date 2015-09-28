@@ -134,8 +134,8 @@ div#boxContainer{
     width: 100%;
 }
 
-li.name{
-	margin-top: 10px;
+nav ul.title-area{
+	padding-top: 10px;
 }
 
 span#logo {
@@ -175,6 +175,12 @@ span#logo {
 .top-bar ul {
     list-style: none;
 		margin-bottom: 0;
+}
+
+@media only screen and (max-width: 40em) {
+	.togglable-for-small{
+		display: none;
+	}
 }
 
 .top-bar-section {

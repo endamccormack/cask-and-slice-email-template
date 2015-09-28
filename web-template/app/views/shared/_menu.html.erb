@@ -1,12 +1,22 @@
 <!-- NAVIGATION STARTS HERE -->
-  <nav class="top-bar hide-for-small" data-topbar="">
+  <nav class="top-bar" data-topbar="">
     <ul class="title-area">
       <li class="name">
+        <span>
+          <img src="/img/menu.png" alt="Menu" onclick="toggleMenu()" style="margin-top:-15px; display: inline-block" class="show-for-small" >
+        </span>
       	<span id="logo">CASK AND SLICE</span>
       </li>
     </ul>
 
-    <section class="top-bar-section">
+    <script>
+      function toggleMenu() {
+        console.log("hello");
+        $("#navigation-list").toggle();
+      }
+    </script>
+
+    <section id="navigation-list" class="top-bar-section togglable-for-small">
       <ul class="right">
         <li class="divider"></li>
         <li>
@@ -19,31 +29,5 @@
         <li class="divider"></li>
     </section>
   </nav>
-  <div class="off-canvas-wrap show-for-small" data-offcanvas>
-    <div class="inner-wrap">
-      <nav class="tab-bar">
-        <section class="left-small">
-          <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-        </section>
 
-        <section class="middle tab-bar-section">
-          <h1 class="title">Foundation</h1>
-        </section>
-      </nav>
-
-      <aside class="left-off-canvas-menu">
-        <ul class="off-canvas-list">
-          <li><a href="/">This Month</a></li>
-          <!-- <li><a href="#">...</a></li> -->
-        </ul>
-      </aside>
-
-      <section class="main-section">
-        <!-- content goes here -->
-      </section>
-
-    <a class="exit-off-canvas"></a>
-
-    </div>
-  </div>
   <!-- NAVIGATION ENDS HERE -->
