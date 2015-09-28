@@ -183,6 +183,12 @@ span#logo {
 	}
 }
 
+@media only screen and (max-width: 64.0625em) {
+	div, p, span{
+		text-align: center;
+	}
+}
+
 .top-bar-section {
   left: 0;
   position: relative;
