@@ -25,6 +25,9 @@
 	font-family: StencilStd;
 	src: url("../font/StencilStd.otf") format("opentype");
 }
+.row{
+	max-width: 1280px;
+}
 
 #headerTextContainer span{
 	font-family: StencilStd;
@@ -74,9 +77,7 @@
     height: 100%;
 }
 
-#headerHandContainer img{
-    height: 460;
-    margin-top: 44px;
+#headerContainer img{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -180,6 +181,16 @@ span#logo {
 @media only screen and (max-width: 40em) {
 	.togglable-for-small{
 		display: none;
+	}
+	span#logo{
+		font-size: 26px;
+	}
+	nav #menu-button{
+		margin-top: -10px;
+		display: inline-block
+	}
+	nav ul.title-area {
+    padding-top: 14px;
 	}
 }
 

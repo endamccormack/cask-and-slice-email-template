@@ -3,7 +3,7 @@
     <ul class="title-area">
       <li class="name">
         <span>
-          <img src="/img/menu.png" alt="Menu" onclick="toggleMenu()" style="margin-top:-15px; display: inline-block" class="show-for-small" >
+          <img src="/img/menu.png" alt="Menu" onclick="toggleMenu()" id="menu-button" class="show-for-small" >
         </span>
       	<span id="logo">CASK AND SLICE</span>
       </li>
@@ -12,7 +12,7 @@
     <script>
       function toggleMenu() {
         console.log("hello");
-        $("#navigation-list").toggle();
+        $("#navigation-list").slideToggle();
       }
     </script>
 
