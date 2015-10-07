@@ -8,14 +8,14 @@ $(document).ready(function(){
 	//$.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
 
 	if (!Modernizr.touch) {
-	  $('#headerHandContainer').css("left", -2000);
+	  $('#headerImageContainer').css("left", -2000);
 		$('#headerTextContainer').hide();
 
 		$('#headerTextContainer').fadeIn(1500, function() {
 			//$('#headerHandContainer').fadeIn(500);
 
 		});
-		$('#headerHandContainer').animate({left: 0}, 2500);
+		$('#headerImageContainer').animate({left: 0}, 2500);
 	}
 
 
